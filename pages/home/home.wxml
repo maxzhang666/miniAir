@@ -3,30 +3,30 @@
     <image style="width:46rpx;height:46rpx;" class="iconList" src="/images/icons/tip.png"></image>Tip:为你的夏日带去清凉
   </view>
   <view class=" text-center margin-top">
-    <image style="width:666rpx;height:222rpx;" class="" src="/images/icons/1.png"></image>
+    <image style="width:666rpx;height:222rpx;" class="" src="/images/icons/{{openType == 0? 1:2}}.png"></image>
     <image style="width: 100rpx; height: 122rpx; position: absolute; left: 69rpx; top: 10vh" class="hehe"
       src="/images/icons/00.png"></image>
     <text style="width: 100rpx; height: 122rpx; position: absolute; left: 68vw; top: 10.5vh"
-      wx:if="{{a1}}">{{s==0?'❄️':'☀️'}}</text>
+      wx:if="{{openType}}">{{modelType==0?'❄️':'☀️'}}</text>
     <image style="width: 128.8rpx; height: 68.8rpx; position: absolute; left: 70vw; top: 14vh"
-      src="/images/icons/{{o}}.png" wx:if="{{a1}}"></image>
+      src="/images/icons/{{temperature}}.png" wx:if="{{openType}}"></image>
   </view>
   <view class=" text-center" style="height:130rpx;">
-    <image style="width:519rpx;height:130rpx;" wx:if="{{a1}}" class="margin-right-sm" src="/images/icons/v.png"></image>
+    <image style="width:519rpx;height:130rpx;" wx:if="{{openType}}" class="margin-right-sm" src="/images/icons/v.png"></image>
   </view>
 
   <view class="flex justify-center ">
     <view class="round margin justify-center flex align-center"
-      style="width:150rpx;height:150rpx;background-color:#3D51BE;" bindtap="p" data-t='0'>
+      style="width:150rpx;height:150rpx;background-color:#3D51BE;" bindtap="selectModel" data-t='0'>
       <image style="width:66rpx;height:66rpx;" class="" src="/images/icons/b0.png"></image>
     </view>
     <view class="round margin justify-center flex align-center"
-      style="width:150rpx;height:150rpx;{{a1 == 1? 'background-color:#FF0059;':'background-color:#4CAF50;'}}"
-      bindtap="a">
+      style="width:150rpx;height:150rpx;{{openType == 1? 'background-color:#FF0059;':'background-color:#4CAF50;'}}"
+      bindtap="clickSwitch">
       <image style="width:66rpx;height:66rpx;" class="" src="/images/icons/b1.png"></image>
     </view>
     <view class="round margin justify-center flex align-center"
-      style="width:150rpx;height:150rpx;background-color:#FFA400;" bindtap="p" data-t='1'>
+      style="width:150rpx;height:150rpx;background-color:#FFA400;" bindtap="selectModel" data-t='1'>
       <image style="width:66rpx;height:66rpx;" class="" src="/images/icons/b2.png"></image>
     </view>
   </view>
@@ -38,39 +38,12 @@
   </view>
   <view class="flex justify-center margin-top-xl">
     <view class="round justify-center flex align-center" style="width:150rpx;height:150rpx;background-color:#DFE0DF;"
-      bindtap="clickSSS">
+      bindtap="clickSub">
       <image style="width:66rpx;height:66rpx;" class="" src="/images/icons/b4.png"></image>
     </view>
   </view>
-
-  <view class="ea text-center" bindtap="lx">
-    作者微信
-  </view>
-
-  <view class="eaa text-center" bindtap="i">
-    <!-- <image style="width:60rpx;height:60rpx;" src="/images/icons/s.png" mode="cover" /> -->
+<!-- 
+  <view class="eaa text-center">
     <button class="cu-btn radius bg-grey xs" open-type="share" style="padding:0 10rpx;">告诉朋友</button>
-  </view>
-
-  <ad unit-id="adunit-efe54beab0e08347" ad-intervals="30"></ad>
-</view>
-
-<view class="cu-modal {{modalName=='Modal'?'show':''}}">
-  <view class="cu-dialog {{modalName=='Modal'?'':'tt'}}">
-    <view class="cu-bar bg-white justify-end">
-      <view class="content">设置</view>
-      <view class="action" bindtap="hideModal">
-        <text class="cuIcon-close text-red"></text>
-      </view>
-    </view>
-    <view class="margin-top">
-      <button type="primary" bindtap="setupAccount">保存设置</button>
-    </view>
-  </view>
-  <view class="margin-top" style="margin:0 auto;">
-    <ad ad-intervals="30" ad-type="video" unit-id="adunit-f8324adb1fe3fdda"></ad>
-  </view>
-  <view class="margin-top" style="margin:0 auto;">
-    <ad ad-intervals="30" ad-type="video" unit-id="adunit-f8324adb1fe3fdda"></ad>
-  </view>
+  </view> -->
 </view>
