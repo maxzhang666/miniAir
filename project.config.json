@@ -41,8 +41,8 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.1",
-  "appid": "wx48d6d656d9ef7637",
-  "projectname": "%E4%BE%BF%E6%90%BA%E5%B0%8F%E7%A9%BA%E8%B0%83",
+  "appid": "你的appid",
+  "projectname": "名字",
   "cloudfunctionTemplateRoot": "",
   "watchOptions": {
     "ignore": []
